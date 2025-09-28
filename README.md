@@ -72,9 +72,9 @@ npm run init-db
 Create a `.env` file in the root directory:
 ```env
 NODE_ENV=development
-PORT=3000
+PORT=3001
 SESSION_SECRET=your-random-string-change-this
-FRONTEND_URL=http://localhost:3000
+FRONTEND_URL=http://localhost:3001
 DB_PATH=./database/tool-finder.db
 BCRYPT_ROUNDS=12
 ```
@@ -89,7 +89,7 @@ npm start
 ```
 
 5. **Access the application:**
-Open your browser and navigate to `http://localhost:3000`
+Open your browser and navigate to `http://localhost:3001` or the port that you set
 
 ## Disclaimer
 
