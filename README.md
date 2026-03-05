@@ -48,7 +48,7 @@ The Express server serves static files from `public/`, so runtime asset URLs in 
 - **Canonical runtime files** are under `public/js/` because that is the configured static root.
 - `public/js/main-updated.js` is the active homepage script referenced by `public/index.html`.
 - `public/js/results.js` is the active results page script referenced by `public/results.html`.
-- Previous root-level `js/main.js` and `js/results.js` were moved to `legacy/js/` as non-runtime historical copies.
+- Duplicate root-level `js/main.js` and `js/results.js` were removed to avoid ambiguity; runtime scripts are only under `public/js/`.
 
 ### Frontend file map
 - `public/index.html` → homepage UI
@@ -60,7 +60,6 @@ The Express server serves static files from `public/`, so runtime asset URLs in 
 - `public/js/dashboard.js` → dashboard behavior
 - `public/js/disclaimer.js` → shared disclaimer/banner behavior
 - `public/manifest.json` and `public/sw.js` → PWA assets served at `/manifest.json` and `/sw.js`
-- `legacy/js/*.js` → archived, not loaded at runtime
 
 ## Installation & Setup
 
