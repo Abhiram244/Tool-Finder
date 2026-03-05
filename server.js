@@ -107,10 +107,6 @@ app.get('/results', (req, res) => {
     }
 });
 
-app.get('/methodology', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'methodology.html'));
-});
-
 // Handle logout
 app.post('/logout', (req, res) => {
     req.session.destroy((err) => {

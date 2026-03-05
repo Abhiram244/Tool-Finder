@@ -4,7 +4,6 @@ const CACHE_NAME = 'tool-finder-v1';
 const STATIC_CACHE_URLS = [
     '/index.html',
     '/results.html',
-    '/methodology.html',
     '/js/main.js',
     '/js/results.js',
     '/manifest.json',
