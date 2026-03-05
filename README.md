@@ -32,6 +32,36 @@ Tool Finder is an AI-powered platform that provides personalized software tool r
 - **Icons**: Font Awesome 6.4.0
 - **PWA**: Service Worker, Web App Manifest
 
+
+## Frontend Runtime Asset Paths
+
+The Express server serves static files from `public/`, so runtime asset URLs in HTML are resolved from that static root (for example `js/results.js` maps to `public/js/results.js`).
+
+### Runtime entry pages (`public/*.html`)
+- `public/index.html` → `js/main-updated.js`, `js/disclaimer.js`
+- `public/results.html` → `js/results.js`, `js/disclaimer.js`, `./manifest.json`
+- `public/dashboard.html` → `js/dashboard.js`, `js/disclaimer.js`
+- `public/login.html` → `js/disclaimer.js` (page logic is inline)
+- `public/register.html` → `js/disclaimer.js` (page logic is inline)
+
+### Canonical frontend JavaScript files
+- **Canonical runtime files** are under `public/js/` because that is the configured static root.
+- `public/js/main-updated.js` is the active homepage script referenced by `public/index.html`.
+- `public/js/results.js` is the active results page script referenced by `public/results.html`.
+- Previous root-level `js/main.js` and `js/results.js` were moved to `legacy/js/` as non-runtime historical copies.
+
+### Frontend file map
+- `public/index.html` → homepage UI
+- `public/results.html` → recommendation results UI
+- `public/dashboard.html` → authenticated dashboard/settings UI
+- `public/login.html` / `public/register.html` → auth flows
+- `public/js/main-updated.js` → homepage behavior
+- `public/js/results.js` → results rendering/actions
+- `public/js/dashboard.js` → dashboard behavior
+- `public/js/disclaimer.js` → shared disclaimer/banner behavior
+- `public/manifest.json` and `public/sw.js` → PWA assets served at `/manifest.json` and `/sw.js`
+- `legacy/js/*.js` → archived, not loaded at runtime
+
 ## Installation & Setup
 
 ### Prerequisites
