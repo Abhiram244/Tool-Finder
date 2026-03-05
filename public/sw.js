@@ -1,11 +1,11 @@
 // Service Worker for Tool Finder PWA
 
-const CACHE_NAME = 'tool-finder-v1';
+const CACHE_NAME = 'tool-finder-v2';
 const STATIC_CACHE_URLS = [
     '/index.html',
     '/results.html',
     '/methodology.html',
-    '/js/main.js',
+    '/js/main-updated.js',
     '/js/results.js',
     '/manifest.json',
     'https://cdn.tailwindcss.com',
