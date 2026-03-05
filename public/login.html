@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Tool Finder</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Manrope', sans-serif;
             overflow-x: hidden;
         }
         
         /* Enhanced Gradient Background */
         .gradient-bg {
-            background: linear-gradient(135deg, #8b5cf6 0%, #dc2626 50%, #f59e0b 100%);
-            background-size: 400% 400%;
-            animation: gradientShift 8s ease-in-out infinite;
+            background: linear-gradient(170deg, #141516 0%, #0d0e0f 70%);
+            border: 1px solid #2a2d31;
             position: relative;
         }
         
@@ -33,11 +32,7 @@
             animation: floatingOrbs 12s ease-in-out infinite;
         }
         
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
+                
         @keyframes floatingOrbs {
             0%, 100% { transform: translate(0, 0) rotate(0deg); }
             33% { transform: translate(20px, -30px) rotate(120deg); }
@@ -166,7 +161,7 @@
         }
     </style>
 </head>
-<body class="gradient-bg min-h-screen flex items-center justify-center page-transition">
+<body class="bg-[#0f1011] min-h-screen flex items-center justify-center page-transition">
     <!-- Login Container -->
     <div class="max-w-md w-full mx-4">
         <!-- Logo Section -->
@@ -202,13 +197,13 @@
                 <!-- Username -->
                 <div class="form-group">
                     <label for="username" class="block text-sm font-semibold text-white mb-2">
-                        <i class="fas fa-user mr-2 text-violet-400"></i>Username
+                        <i class="fas fa-user mr-2 text-amber-300"></i>Username
                     </label>
                     <input
                         type="text"
                         id="username"
                         name="username"
-                        class="input-enhanced w-full px-4 py-3 bg-gray-800 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 placeholder-gray-400"
+                        class="input-enhanced w-full px-4 py-3 bg-gray-800 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-amber-700 focus:border-amber-700 placeholder-gray-400"
                         placeholder="Enter your username"
                         required
                         autocomplete="username"
@@ -218,14 +213,14 @@
                 <!-- Password -->
                 <div class="form-group">
                     <label for="password" class="block text-sm font-semibold text-white mb-2">
-                        <i class="fas fa-lock mr-2 text-violet-400"></i>Password
+                        <i class="fas fa-lock mr-2 text-amber-300"></i>Password
                     </label>
                     <div class="relative">
                         <input
                             type="password"
                             id="password"
                             name="password"
-                            class="input-enhanced w-full px-4 py-3 bg-gray-800 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-violet-500 focus:border-violet-500 placeholder-gray-400 pr-12"
+                            class="input-enhanced w-full px-4 py-3 bg-gray-800 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-amber-700 focus:border-amber-700 placeholder-gray-400 pr-12"
                             placeholder="Enter your password"
                             required
                             autocomplete="current-password"
@@ -244,7 +239,7 @@
                 <button
                     type="submit"
                     id="loginBtn"
-                    class="btn-enhanced w-full bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-violet-700 hover:to-purple-700 transition duration-300 transform hover:scale-[1.02] shadow-lg border border-violet-500 flex items-center justify-center"
+                    class="btn-enhanced w-full bg-amber-700 text-white font-semibold py-3 px-6 rounded-lg hover:bg-amber-800 transition duration-300 transform hover:scale-[1.02] shadow-lg border border-violet-500 flex items-center justify-center"
                 >
                     <span id="loginBtnText">
                         <i class="fas fa-sign-in-alt mr-2"></i>Sign In
@@ -260,7 +255,7 @@
             <div class="mt-6 text-center fade-in fade-in-delay-2">
                 <p class="text-gray-400">
                     Don't have an account? 
-                    <a href="/register" class="text-violet-400 hover:text-violet-300 font-medium transition-colors">
+                    <a href="/register" class="text-amber-300 hover:text-violet-300 font-medium transition-colors">
                         Sign up here
                     </a>
                 </p>

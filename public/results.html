@@ -10,27 +10,22 @@
     <meta name="theme-color" content="#8b5cf6">
     <link rel="manifest" href="./manifest.json">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Manrope', sans-serif;
             overflow-x: hidden;
         }
         
         /* Enhanced Gradient Background */
         .gradient-bg {
-            background: linear-gradient(135deg, #8b5cf6 0%, #dc2626 50%, #f59e0b 100%);
-            background-size: 400% 400%;
-            animation: gradientShift 8s ease-in-out infinite;
+            background: linear-gradient(170deg, #141516 0%, #0d0e0f 70%);
+            border: 1px solid #2a2d31;
             position: relative;
         }
         
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
+                
         .glass-effect {
             background: rgba(17, 24, 39, 0.95);
             backdrop-filter: blur(16px);
@@ -66,7 +61,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(220, 38, 38, 0.1));
+            background: rgba(196, 166, 125, 0.08);
             opacity: 0;
             transition: opacity 0.3s ease;
             border-radius: inherit;
@@ -317,13 +312,13 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <a href="index.html" class="flex items-center space-x-2">
-                        <i class="fas fa-lightbulb text-2xl text-violet-400"></i>
+                        <i class="fas fa-lightbulb text-2xl text-amber-300"></i>
                         <span class="font-bold text-xl text-white">Tool Finder</span>
                     </a>
                 </div>
                 <div class="flex items-center space-x-8">
-                    <a href="/dashboard" class="text-gray-300 hover:text-violet-400 font-medium transition">Dashboard</a>
-                    <a href="/search" class="text-gray-300 hover:text-violet-400 font-medium transition">Search</a>
+                    <a href="/dashboard" class="text-gray-300 hover:text-amber-300 font-medium transition">Dashboard</a>
+                    <a href="/search" class="text-gray-300 hover:text-amber-300 font-medium transition">Search</a>
                 </div>
             </div>
         </div>
