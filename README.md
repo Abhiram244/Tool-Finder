@@ -60,6 +60,7 @@ The Express server serves static files from `public/`, so runtime asset URLs in 
 - `public/js/dashboard.js` → dashboard behavior
 - `public/js/disclaimer.js` → shared disclaimer/banner behavior
 - `public/manifest.json` and `public/sw.js` → PWA assets served at `/manifest.json` and `/sw.js`
+- Service worker source of truth is **only** `public/sw.js` (no duplicate root `sw.js`) to prevent branch drift/conflicts
 
 ## Installation & Setup
 
